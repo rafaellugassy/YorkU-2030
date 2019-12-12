@@ -1,0 +1,17 @@
+package test4;
+
+public class Y extends X{
+
+	public Y(){
+		super();
+	}
+	
+	public void stuff(){
+		xMethod();
+	}
+	
+	@Override
+	public void xMethod() {
+		System.out.println("bye");
+	}
+}

@@ -1,0 +1,14 @@
+package eecs2030.lab7;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class FibonacciStackFrameTester {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

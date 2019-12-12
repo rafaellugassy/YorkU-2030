@@ -1,0 +1,14 @@
+package practice.test2A;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class Test2CTest {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

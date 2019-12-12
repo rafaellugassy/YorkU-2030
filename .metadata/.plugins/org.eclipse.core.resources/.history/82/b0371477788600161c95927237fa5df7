@@ -1,0 +1,17 @@
+package practice.test2A;
+
+import java.util.List;
+
+public class Test2A {
+
+	private Test2A(){
+		
+	}
+	
+	public static String first(List<String> list) throws IllegalArgumentException{
+		return list.get(0);
+	}
+	
+	
+	
+}

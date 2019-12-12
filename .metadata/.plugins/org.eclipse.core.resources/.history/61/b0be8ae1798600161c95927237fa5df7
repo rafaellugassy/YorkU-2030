@@ -1,0 +1,33 @@
+package practice.test2A;
+
+import java.util.List;
+
+public class Test2A {
+
+	private Test2A(){
+		
+	}
+	
+	public static char first(String s){
+		return s.charAt(0);
+	}
+	
+	public static char second(String s) throws IllegalArgumentException{
+		try {
+			return s.charAt(1);
+		}
+		catch(Exception e){
+			throw new IllegalArgumentException();
+		}
+	}
+	
+	public static String longest(Set<String> t){
+		String result = null;
+		for (String s: t){
+			if (result == null || s.length() > result.length())
+				result = s;
+		}
+		return result;
+	}
+	
+}

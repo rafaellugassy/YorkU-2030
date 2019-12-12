@@ -1,0 +1,65 @@
+package practice.test2A;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+public class Test2A {
+
+	private Test2A() {
+
+	}
+
+	public static char first(String s) {
+		return s.charAt(0);
+	}
+
+	public static char second(String s) throws IllegalArgumentException {
+		try {
+			return s.charAt(1);
+		} catch (Exception e) {
+			throw new IllegalArgumentException();
+		}
+	}
+
+	public static String longest(Set<String> t) {
+		String result = "";
+		for (String s : t) {
+			if (result == "" || s.length() > result.length())
+				result = s;
+		}
+		return result;
+	}
+
+	public static String mostFrequent(List<String> t) {
+		String most = null;
+		Map<String, Integer> sMap = new HashMap<String, Integer>();
+		for (String s : t){
+			if (most == null) 
+				most = s;
+			if (!sMap.containsKey(s))
+				sMap.put(s, 1);
+			else {
+				sMap.put(s, sMap.get(s));
+				if (sMap.get(s) > sMap.get(most)){
+					most = s;
+				}
+				else if (sMap.get(s) == sMap.get(most)){
+					for (int i = 0; i < s.length(); i++){
+						if (most.length() < i)
+							break;
+						Character sChar = s.toLowerCase().charAt(i);
+						Character mostChar = most.toLowerCase().charAt(i);
+						if (sChar.compareTo(mostChar) < 0) {
+							most = s;
+							break;
+						}
+					}
+				}
+			}
+		}
+		return most;
+	}
+
+}
